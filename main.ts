@@ -1,3 +1,7 @@
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    position = 90
+    ServoSlow.setServoPosition(1, 90)
+})
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 13) {
         position = ServoSlow.setServoAngle(1, 90, 10, position, ServoSlow.ServoDirection.CW)
