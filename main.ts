@@ -13,6 +13,7 @@ radio.onReceivedNumber(function (receivedNumber) {
     } else {
     	
     }
+    basic.showNumber(position)
 })
 let position = 0
 position = 90
