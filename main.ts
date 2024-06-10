@@ -10,9 +10,15 @@ radio.onReceivedNumber(function (receivedNumber) {
     } else if (receivedNumber == 0) {
         ServoSlow.setServoPosition(1, 90)
         position = 90
-    } else {
-    	
     }
+    basic.showNumber(position)
+})
+input.onButtonPressed(Button.A, function () {
+    position = ServoSlow.setServoAngle(1, 90, 10, position, ServoSlow.ServoDirection.CCW)
+    basic.showNumber(position)
+})
+input.onButtonPressed(Button.B, function () {
+    position = ServoSlow.setServoAngle(1, 90, 10, position, ServoSlow.ServoDirection.CW)
     basic.showNumber(position)
 })
 let position = 0
